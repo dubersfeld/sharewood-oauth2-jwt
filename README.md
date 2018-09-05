@@ -36,15 +36,15 @@ This creates the two databases named sharewood\_jwt\_users and sharewood\_photos
 ## 2. Key pair creation
 
 Run the command:
-
+```
 keytool -genkeypair -alias mytest -keyalg RSA -keypass mypassword -keystore mytest.jks -storepass mypassword
-
+```
 This creates a binary keystore file named mytest.jks
 
 Run the command:
-
+```
 keytool -list -rfc --keystore mytest.jks | openssl x509 -inform pem -pubkey > publicKey.txt
-
+```
 This creates a text file named public.txt that looks like this:
 
 ```
@@ -78,7 +78,6 @@ UcuL2YfizhdcXer+2vx7EiKr17cp8qhyK9M/YDtCG/9ogscu2rMv6efH+k4UaTIC
 IMvrhbm0xIbczDjDqrtb1fnDcvaBKfMEJamDL68rXNw0whQZHb48ELRDPGM21Xgs
 bUhy2dX14Gst9aQ=
 -----END CERTIFICATE-----
-
 ``` 
 
 Copy the file mytest.jks into the folder src/main/resources of authorization-server.
