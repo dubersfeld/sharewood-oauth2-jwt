@@ -18,6 +18,7 @@ authorization-url: "http://localhost:8080"
 
 login-url: "http://localhost:8080/authorization/login" 
 
+# edit to match your own password
 signing:
   key:
     password: lorem42ipsum
